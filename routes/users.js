@@ -43,3 +43,17 @@ router.delete('/:id', (req, res) => {
 });
 
 module.exports = router;
+const express = require('express');
+const router = express.Router();
+
+const users = [
+  { id: 1, name: 'John Doe', email: 'john@example.com', age: 25 },
+  { id: 2, name: 'Jane Doe', email: 'jane@example.com', age: 30 }
+];
+
+// GET /users
+router.get('/', (req, res) => {
+  res.json(users);
+});
+
+module.exports = router;
